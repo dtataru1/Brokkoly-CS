@@ -5,8 +5,10 @@ from django.shortcuts import render
 
 
 def hello(request):
-    return HttpResponse("<h1>Hello Django!</h1>")
+
+    return render(request, "ui/hello.html")
+    # return HttpResponse("<h1>Hello Django!</h1>")
 
 
 def manual_control(request):
-    return HttpResponse("<h1> Drone Manual Control</h1>")
+    return render(request, 'ui/manual_control.html')
