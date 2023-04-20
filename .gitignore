@@ -4,3 +4,5 @@ db.sqlite3
 __pycache__/
 brokkoly_cs/__pycache__/
 ui/__pycache__/
+
+*.pyc
