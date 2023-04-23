@@ -8,9 +8,8 @@ This repository contains files for being able to run the EPFL Xplore's drone pla
 ## Setup
 
 In order to test, contribute and/or run the control station, you will need the following dependencies:
-- Ubuntu 16.04
-- ROS2 Dashing
-- python3
+- Ubuntu 20.04
+- ROS2 Foxy
 
 First, clone the Brokkoly-CS repository:
 ```
@@ -28,3 +27,22 @@ make brokkoly
 ```
 
 ## Contribution
+
+This repository follows the continous CI/CD workflow. Functional working versions are patched in releases, and the main branch always contains the latest release.
+The dev branch is the main working branch on which developped code is pushed to and tested. Everytime a new feature, bugfix or other code needs to be written or updated, you need to branch out from the dev branch using the following guidelines:
+The following conventions should be followed for branch naming:
+For new features: /feature/description-of-feature
+For bug fixes: /bugfix/bug-description
+For refactoring of code: /refactor/stuff-to-refactor
+
+
+For merging back to dev the following procedure should be followed:
+Ensure branch is working, in parcticular by writing unit tests (described later)
+merge dev back to your branch, to ensure proper functionality, and resolve any merge conflicts (use of VS Code merge conflict editor is recommended)
+Create a Pull Request on Github and detailing the changes to your branch, and request a review from someone else on the team. Once the PR is approved (if changes requested address those and re-request review), the person that created the PR is responsible for merging to the dev branch. Once merged, delete the feature/bugfix branch as it is not needed.
+
+## Testing
+
+For testing and ensuring no broken code is pushed on the dev and even less so on the main branch, unittests are written and applied. On each pull request, a github action is set up to set the environment and run all unit tests.
+
+MORE INFORMATION COMING...
