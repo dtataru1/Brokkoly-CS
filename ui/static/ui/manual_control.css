@@ -1,0 +1,72 @@
+body {
+     background-image: url("images/background.png");
+     background-size: 1920px;
+}
+
+#page_title {
+     position: absolute;
+     top: 5px;
+     left: 220px;
+     background-color: yellow;
+}
+
+nav ul {
+     display: block;
+     position: absolute;
+     background-color: purple;
+     left: 5px;
+     top: 20px;
+     height: 600px;
+     width: 160px;
+
+}
+
+
+#camera_display {
+     position: absolute;
+     background-color: red;
+     left: 220px;
+     top: 70px;
+     height: 590px;
+     width: 1050px;
+     opacity: 1;
+
+}
+
+#map_display {
+     position: absolute;
+     width: 500px;
+     height: 500px;
+     top: 70px;
+     left: 1300px;
+     background-color: aqua;
+     opacity: 1;
+}
+
+#sensor_display {
+     position: absolute;
+     background-color: green;
+     bottom: 60px;
+     left: 220px; 
+     height: 200px;
+     width: 1000px;
+}
+
+
+#control_inputs {
+     position: absolute;
+     background-color: greenyellow;
+     bottom: 20px;
+     right: 20px;
+     height: 330px;
+     width: 550px;
+}
+
+#drone_state {
+     position: absolute;
+     background-color: brown;
+     bottom: 0px;
+     height: 100px;
+     left: 800px;
+     width: 200px;
+}

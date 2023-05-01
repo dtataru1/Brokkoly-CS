@@ -5,19 +5,20 @@
 
 <head>
     <title>Manual Control</title>
-    <link rel="stylesheet" href="{% static 'ui/base.css' %}" />
+    <link rel="stylesheet" href="{% static 'ui/manual_control.css' %}" />
 </head>
 
 <body>
 
     <nav>
-        <a href="setup.html">Setup</a>
-        <a href="manual_control.html">Manual Control</a>
-        <a href="autonomous_nav.html">Autonomous Navigation</a>
-        <a href="dr_info.html">Drone Info</a>
-
+        <ul>
+            <a href="../hello">Setup</a>
+            <a href="">Manual Control</a>
+            <a href="../autonomous-nav">Autonomous Navigation</a>
+            <a href="../dr-info">Drone Info</a>
+        </ul>
     </nav>
-    <h1>Manual Control</h1>
+    <h1 id="page_title">Manual Control</h1>
 
 
     <div id="camera_display">
@@ -28,17 +29,24 @@
     </div>
 
     <div id="map_display">
-
+        <p> This is the division of the map display in manual mode, if needed it may be a possibility to get it zoomed
+            in</p>
     </div>
 
 
     <div id="sensor_display">
+        <p>This section is used for displaying sensor data that is coming from the drone, such as imu, position,
+            pressure(or altitude) and motor speed data, as well as applied PWM if not available</p>
 
     </div>
 
+    <div id="control_inputs">This section is supposed to show what control inputs the operator is sending to the drone
+    </div>
 
+    <div id="drone_state">
+        <p>Current drone state and emergency stops (wait, abort, etc...)</p>
+    </div>
 </body>
-
 
 
 </html>
