@@ -20,7 +20,10 @@ from ui import views
 
 urlpatterns = [
     path("admin/", admin.site.urls),
-    path("hello/", views.hello),
+    path("", views.hello),
+    path("setup/", views.hello),
     path("manual-control/", views.manual_control),
-    path("", views.manual_control)
+    path("navigation", views.hello),
+    path("drone-info/", views.hello),
+    path("documentation/", views.hello),
 ]

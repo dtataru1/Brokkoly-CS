@@ -1,35 +1,62 @@
 body {
      background-image: url("images/background.png");
      background-size: 1920px;
+     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 #page_title {
      position: absolute;
      top: 5px;
      left: 220px;
-     background-color: yellow;
+     color: white;
 }
 
-nav ul {
-     display: block;
+nav {
      position: absolute;
-     background-color: purple;
+     background-color: #0e172e;
      left: 5px;
      top: 20px;
-     height: 600px;
-     width: 160px;
+     height: 450px;
+     width: 170px;
+     border-radius: 20px;
+     text-align: center;
 
 }
+nav ul {
+     list-style-type: none;
+     position: inherit;
+     top: -30px;
+     margin: 0;
+     padding: 0;
+}
 
+nav ul a{
+     /* position: inherit; */
+     display: block;
+     margin-block: 50px;
+     color: white;
+     font-weight: bold;
+     text-decoration: none;
+     padding: 8px 16px;
+}
+
+nav ul a:hover {
+     background-color: white;
+     color: #0e172e;
+
+}
 
 #camera_display {
      position: absolute;
-     background-color: red;
+     background-image: url("images/emile_glo_opencv.png");
+     
+     background-size: 1050px 590px;
      left: 220px;
      top: 70px;
      height: 590px;
      width: 1050px;
      opacity: 1;
+     border-radius: 25px;
 
 }
 
@@ -39,23 +66,63 @@ nav ul {
      height: 500px;
      top: 70px;
      left: 1300px;
-     background-color: aqua;
+     background-image: url("images/map.png");
+     background-size: 120%;
      opacity: 1;
+     border-radius: 25px;
 }
 
 #sensor_display {
      position: absolute;
-     background-color: green;
      bottom: 60px;
      left: 220px; 
      height: 200px;
      width: 1000px;
+     color: white;
 }
 
+#sensor_display h3 {
+     position: inherit;
+     top: -10px;
+}
+
+#gps_data {
+     position: inherit;
+     top: 25px;
+}
+
+#gps_data ul {
+     list-style-type: none;
+     position: inherit;
+     left: -30px;
+     width: 150px;
+     top: 30px;
+}
+
+#battery_voltage {
+     position: inherit;
+     top: 25px;
+     left: 400px;
+     /* font-weight: bold; */
+}
+
+#motor_speeds {
+     position: inherit;
+     top: 25px;
+     left: 200px;
+}
+
+#motor_speeds ul {
+     list-style-type: none;
+     position: inherit;
+     left: -30px;
+     width: 150px;
+     top: 30px;
+}
 
 #control_inputs {
      position: absolute;
-     background-color: greenyellow;
+     background-color: white;
      bottom: 20px;
      right: 20px;
      height: 330px;
@@ -64,9 +131,11 @@ nav ul {
 
 #drone_state {
      position: absolute;
-     background-color: brown;
+     background-color: white;
      bottom: 0px;
      height: 100px;
      left: 800px;
      width: 200px;
 }
+
+
