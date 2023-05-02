@@ -12,40 +12,53 @@
 
     <nav>
         <ul>
-            <a href="../hello">Setup</a>
+            <a href="../setup">Setup</a>
             <a href="">Manual Control</a>
-            <a href="../autonomous-nav">Autonomous Navigation</a>
-            <a href="../dr-info">Drone Info</a>
+            <a href="../navigation">Autonomous Navigation</a>
+            <a href="../drone-info">Drone Info</a>
+            <a href="../documentation">Documentation</a>
         </ul>
     </nav>
-    <h1 id="page_title">Manual Control</h1>
-
+    <h1 id="page_title">MANUAL CONTROL</h1>
 
     <div id="camera_display">
-        <p> This is the division where the camera will be displayed. Probably some information overlay with the sensors
-            will be done as it will be easier to see for the pilot. A full screen option will be available, and ideally
-            linked to a joystick button that needs to be mapped. </p>
 
     </div>
 
+    
     <div id="map_display">
-        <p> This is the division of the map display in manual mode, if needed it may be a possibility to get it zoomed
-            in</p>
+
     </div>
 
 
     <div id="sensor_display">
-        <p>This section is used for displaying sensor data that is coming from the drone, such as imu, position,
-            pressure(or altitude) and motor speed data, as well as applied PWM if not available</p>
-
+            <h3>SENSOR DATA</h3>
+        
+        <div id="gps_data">
+            <h4>GPS</h4>
+            <ul>
+                <li>Lat.: 43.664556°N</li>
+                <li>Lon.: 7.867775°E</li>
+                <li>Alt.: 12.3m</li>
+            </ul>
+        </div>
+        <h4 id="battery_voltage">Battery Voltage: 19.2V</h4>
+            <div id="motor_speeds"> <h4>Motor Speeds</h4>
+                <ul>
+                    <li>M1: 1200RPM</li>
+                    <li>M2: 2000RPM</li>
+                    <li>M3: 1200RPM</li>
+                    <li>M4: 8000RPM</li>
+                </ul></div>
+       
     </div>
 
     <div id="control_inputs">This section is supposed to show what control inputs the operator is sending to the drone
     </div>
 
-    <div id="drone_state">
+    <!-- <div id="drone_state">
         <p>Current drone state and emergency stops (wait, abort, etc...)</p>
-    </div>
+    </div> -->
 </body>
 
 
