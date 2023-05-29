@@ -4,78 +4,84 @@ body {
      font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
-#page_title {
-     position: absolute;
-     top: 5px;
-     left: 220px;
-     color: white;
-}
 
 nav {
      position: absolute;
      background-color: #0e172e;
-     left: 5px;
-     top: 20px;
-     height: 450px;
-     width: 170px;
-     border-radius: 20px;
-     text-align: center;
-
+     left: 1%;
+     top: 5%;
+     height: 52%;
+     width: 11.6%;
+     border-radius: 10px;
 }
+
 nav ul {
      list-style-type: none;
      position: inherit;
-     top: -30px;
+     top: 3%;
+     bottom: 10%;
      margin: 0;
      padding: 0;
 }
 
 nav ul a{
-     /* position: inherit; */
      display: block;
-     margin-block: 50px;
+     margin-block: 0px;
      color: white;
      font-weight: bold;
      text-decoration: none;
-     padding: 8px 16px;
+     padding-top: 25px;
+     padding-bottom: 25px;
+     padding-left: 14px;
+     padding-right: 27px;
+     text-align: left;
+
 }
 
-nav ul a:hover {
-     background-color: white;
-     color: #0e172e;
+nav ul a img {
+     width: 30px;
+     height: 30px;
+     vertical-align: middle;
+     margin-right: 5px;
+}
 
+
+nav ul a:hover {
+     background-color: #ad6242;
+     border-radius: 5px;
+}
+
+
+
+#page_title {
+     position: absolute;
+     top: 1%;
+     left: 14%;
+     color: white;
 }
 
 #camera_display {
      position: absolute;
-     background-image: url("images/emile_glo_opencv.png");
-     
-     background-size: 1050px 590px;
-     left: 220px;
-     top: 70px;
-     height: 590px;
-     width: 1050px;
+     left: 15%;
+     top: 10%;
      opacity: 1;
      border-radius: 25px;
 
 }
 
-#map_display {
+#map {
      position: absolute;
-     width: 500px;
-     height: 500px;
      top: 70px;
      left: 1300px;
-     background-image: url("images/map.png");
-     background-size: 120%;
-     opacity: 1;
+
      border-radius: 25px;
 }
 
 #sensor_display {
      position: absolute;
-     bottom: 60px;
-     left: 220px; 
+     background-color: #ad6242;
+     top: 70%;
+     left: 10%; 
      height: 200px;
      width: 1000px;
      color: white;
@@ -83,7 +89,7 @@ nav ul a:hover {
 
 #sensor_display h3 {
      position: inherit;
-     top: -10px;
+     padding-left: 5px;
 }
 
 #gps_data {
@@ -120,6 +126,11 @@ nav ul a:hover {
      top: 30px;
 }
 
+
+
+
+
+
 #control_inputs {
      position: absolute;
      background-color: white;
@@ -137,5 +148,8 @@ nav ul a:hover {
      left: 800px;
      width: 200px;
 }
+
+
+
 
 

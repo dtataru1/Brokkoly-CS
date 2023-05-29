@@ -23,7 +23,7 @@ urlpatterns = [
     path("", views.hello),
     path("setup/", views.hello),
     path("manual-control/", views.manual_control),
-    path("navigation", views.hello),
+    path("navigation", views.navigation),
     path("drone-info/", views.hello),
     path("documentation/", views.hello),
 ]

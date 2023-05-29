@@ -10,3 +10,6 @@ def hello(request):
 
 def manual_control(request):
     return render(request, "ui/manual_control.html")
+
+def navigation(request):
+    return render(request, "ui/navigation.html")
