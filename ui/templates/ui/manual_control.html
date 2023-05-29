@@ -26,17 +26,8 @@
         <video id="videoElement" height="500px" autoplay></video>
     </div>
 
-    <script>
-        // Get access to the webcam stream
-        navigator.mediaDevices.getUserMedia({ video: true })
-            .then(function(stream) {
-                var videoElement = document.getElementById('videoElement');
-                videoElement.srcObject = stream;
-            })
-            .catch(function(error) {
-                console.log('Error accessing the webcam:', error);
-            });
-    </script>
+    <script src="{% static 'ui/js/camera.js' %}"></script>        
+
     
     <div id="map" style='width: 500px; height: 500px;'></div>
         <script>

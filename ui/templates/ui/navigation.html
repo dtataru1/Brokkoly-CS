@@ -3,8 +3,8 @@
 {% load static %}
 <html>
 <head>
-    <title>Manual Control</title>
-    <link rel="stylesheet" href="{% static 'ui/manual_control.css' %}" />
+    <title>Navigation</title>
+    <link rel="stylesheet" href="{% static 'ui/navigation.css' %}" />
     <script src='https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.js'></script>
     <link href='https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.css' rel='stylesheet' />
 </head>
@@ -20,105 +20,25 @@
             <a href="../documentation"><img src="{% static 'ui/images/documentation.svg' %}"></img><span>Documentation</span></a>
         </ul>
     </nav>
-    <h1 id="page_title">MANUAL CONTROL</h1>
+    <h1 id="page_title">NAVIGATION</h1>
 
-    <div id="camera_display">
-        <video id="videoElement" height="500px" autoplay></video>
-    </div>
+    <div id="map" style='width: 900px; height: 700px;'></div>
 
-    <script>
-        // Get access to the webcam stream
-        navigator.mediaDevices.getUserMedia({ video: true })
-            .then(function(stream) {
-                var videoElement = document.getElementById('videoElement');
-                videoElement.srcObject = stream;
-            })
-            .catch(function(error) {
-                console.log('Error accessing the webcam:', error);
-            });
-    </script>
+    <div id="map_buttons">
+        <h2>Waypoint Details</h2>
+        <label for="longitude">Longitude:</label>
+        <input type="text" id="longitude" placeholder="Enter longitude" />
     
-    <div id="map" style='width: 500px; height: 500px;'></div>
-        <script>
-        mapboxgl.accessToken = 'pk.eyJ1IjoiZHRhdGFydSIsImEiOiJjbGk2MHR3b2QzNng1M2Ntd2p3NDZ5dm83In0.vdDcxDfcebYvq54vva5OtQ';
-        const map = new mapboxgl.Map({
-        container: 'map', // container ID
-        style: 'mapbox://styles/dtataru/cli61f7c200p501qu0skf8y66', // style URL
-        center: [6.565270, 46.518951], // starting position [lng, lat]
-        zoom: 18, // starting zoom
-        });
-        map.on('load', () => {
-        // Load an image from an external URL.
-        map.loadImage(
-            "{% static 'ui/images/brokkoly_icon.png' %}",
-            (error, image) => {
-                if (error) throw error;
-
-                // Add the image to the map style.
-                map.addImage('brokkoly', image);
-
-                // Add a data source containing one point feature.
-                map.addSource('point', {
-                    'type': 'geojson',
-                    'data': {
-                        'type': 'FeatureCollection',
-                        'features': [
-                            {
-                                'type': 'Feature',
-                                'geometry': {
-                                    'type': 'Point',
-                                    'coordinates': [6.565270, 46.518951]
-                                }
-                            }
-                        ]
-                    }
-                });
-
-                // Add a layer to use the image to represent the data.
-                map.addLayer({
-                    'id': 'points',
-                    'type': 'symbol',
-                    'source': 'point', // reference the data source
-                    'layout': {
-                        'icon-image': 'brokkoly', // reference the image
-                        'icon-size': 0.04
-                    }
-                });
-            }
-        );
-    });
-
-
-       </script>
-
-    <div id="sensor_display">
-            <h3>SENSOR DATA</h3>
+        <label for="latitude">Latitude:</label>
+        <input type="text" id="latitude" placeholder="Enter latitude" />
         
-        <div id="gps_data">
-            <h4>GPS</h4>
-            <ul>
-                <li>Lat.: 43.664556°N</li>
-                <li>Lon.: 7.867775°E</li>
-                <li>Alt.: 12.3m</li>
-            </ul>
-        </div>
-        <h4 id="battery_voltage">Battery Voltage: 19.2V</h4>
-            <div id="motor_speeds"> <h4>Motor Speeds</h4>
-                <ul>
-                    <li>M1: 1200RPM</li>
-                    <li>M2: 2000RPM</li>
-                    <li>M3: 1200RPM</li>
-                    <li>M4: 8000RPM</li>
-                </ul></div>
-       
-    </div>
+        <button id="addWaypointBtn">Add Waypoint</button>
+        <button id="addTakeoffBtn">Add Takeoff Point</button>
+        <button id="addLandingBtn">Add Landing Point</button>
+      </div>
 
-    <div id="control_inputs">This section is supposed to show what control inputs the operator is sending to the drone
-    </div>
+    <script src="{% static 'ui/js/navmap.js' %}"></script>
 
-    <!-- <div id="drone_state">
-        <p>Current drone state and emergency stops (wait, abort, etc...)</p>
-    </div> -->
 </body>
 
 

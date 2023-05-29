@@ -65,7 +65,7 @@ nav ul a:hover {
      left: 15%;
      top: 10%;
      opacity: 1;
-     border-radius: 25px;
+     border-radius: 50px;
 
 }
 
@@ -109,7 +109,6 @@ nav ul a:hover {
      position: inherit;
      top: 25px;
      left: 400px;
-     /* font-weight: bold; */
 }
 
 #motor_speeds {
