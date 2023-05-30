@@ -31,7 +31,7 @@ nav {
     left: 1%;
     top: 5%;
     display: flex;
-    align-items: center; 
+    align-items: center;
     justify-content: left;
     border-radius: 10px;
     max-width: 60px;
@@ -50,9 +50,9 @@ nav ul {
     padding: 0;
 }
 
- nav ul li{
+nav ul li {
     font-weight: bold;
-    text-decoration: none;    
+    text-decoration: none;
     padding: 0;
     flex: 1;
     text-align: left;
@@ -61,12 +61,10 @@ nav ul {
     white-space: nowrap;
 }
 
-nav ul li a{
+nav ul li a {
     text-decoration: none;
     color: white;
     display: block;
-    /* width: 100%;
-    height: 100%; */
     padding: 10px;
 
 }
@@ -84,6 +82,6 @@ nav ul li.active {
     background-color: #146cb5;
 }
 
-nav ul li:hover{
+nav ul li:hover {
     background-color: #ad6242;
 }
