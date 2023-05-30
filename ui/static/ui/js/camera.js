@@ -1,8 +1,12 @@
-navigator.mediaDevices.getUserMedia({ video: true })
-.then(function(stream) {
-    var videoElement = document.getElementById('videoElement');
-    videoElement.srcObject = stream;
-})
-.catch(function(error) {
-    console.log('Error accessing the webcam:', error);
-});
+const videoContainer = document.getElementById('video-container');
+const socket = new WebSocket('ws://' + window.location.host + '/ws/video_stream/');
+
+socket.onmessage = function(event) {
+  const imgElement = document.createElement('img');
+  imgElement.src = URL.createObjectURL(event.data);
+  
+  while (videoContainer.firstChild) {
+    videoContainer.firstChild.remove();
+  }
+  videoContainer.appendChild(imgElement);
+};

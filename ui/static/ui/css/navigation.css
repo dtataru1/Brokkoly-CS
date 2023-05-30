@@ -1,4 +1,4 @@
-body {
+/* body {
     background-image: url("images/background.png");
     background-size: 1920px;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
@@ -58,7 +58,7 @@ nav ul a:hover {
     top: 1%;
     left: 14%;
     color: white;
-}
+} */
 
 /* #camera_display {
     position: absolute;
@@ -69,7 +69,7 @@ nav ul a:hover {
 
 } */
 
-#map {
+/* #map {
     position: absolute;
     top: 10%;
     left: 15%;
@@ -152,7 +152,7 @@ nav ul a:hover {
     height: 100px;
     left: 800px;
     width: 200px;
-}
+} */
 
 
 

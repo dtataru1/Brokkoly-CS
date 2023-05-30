@@ -1,7 +1,5 @@
 {% extends "ui/base.html" %}
-
-<!-- {% load static %} -->
-
+{% load static %}
 {% block extra_styles %}
 <link rel="stylesheet" href="{% static 'ui/css/manual_control.css' %}" />
 <link href='https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.css' rel='stylesheet' />
@@ -12,8 +10,7 @@
 
 {% block content %}
 
-    <div id="camera_display">
-        <video id="videoElement" height="500px" autoplay></video>
+    <div id="video-container">
     </div>
 
     <script src="{% static 'ui/js/camera.js' %}"></script>        
