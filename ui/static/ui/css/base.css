@@ -13,6 +13,18 @@ body {
     color: white;
 }
 
+#logo {
+    position: absolute;
+    bottom: 4%;
+    left: 1%;
+    text-align: center;
+}
+
+#logo img {
+    object-fit: cover;
+}
+
+
 nav {
     background-color: #0e172e;
     position: absolute;

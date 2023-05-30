@@ -3,8 +3,12 @@
 <html>
     <head><title>Brokkoly Control Station</title></head>
     <link rel="stylesheet" href="{% static 'ui/css/base.css' %}" />
+    <link rel="icon" href="{% static 'ui/css/images/base/favicon.ico' %}" type="image/x-icon">
     {% block extra_styles %}{% endblock %}
     <body>
+        <div id="logo">
+            <img src="{% static 'ui/css/images/base/mission_patch.png' %}" alt="Mission Patch" width="100px">
+        </div>
         <nav>
             <ul>
                 <li {% if request.path == '/setup/' %} class="active"{% endif %}><a href="/setup"><img src="{% static 'ui/css/images/base/setup.svg' %}"></img><span>Setup</span></a></li>
