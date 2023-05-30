@@ -20,10 +20,11 @@ from ui import views
 
 urlpatterns = [
     path("admin/", admin.site.urls),
-    path("", views.hello),
-    path("setup/", views.hello),
+    path("", views.setup),
+    path("setup/", views.setup),
     path("manual-control/", views.manual_control),
     path("navigation", views.navigation),
-    path("drone-info/", views.hello),
-    path("documentation/", views.hello),
+    path("drone-info/", views.drone_info),
+    path("documentation/", views.documentation),
+    path('video_feed/', views.video_feed, name='video_feed'),
 ]

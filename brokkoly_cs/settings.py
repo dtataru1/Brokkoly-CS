@@ -26,7 +26,7 @@ SECRET_KEY = "django-insecure-sft22!3(ew95j34q@m@mk^)rt03py=l0l4(bg%n0bmy!(xf7ig
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["127.0.0.1", "localhost", "192.168.0.70", "brokkoly.xplore"]
 
 
 # Application definition
@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     "ui",
+    "cv2",
 ]
 
 MIDDLEWARE = [

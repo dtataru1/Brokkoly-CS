@@ -11,9 +11,9 @@
 {% block content %}
 
     <div id="video-container">
+        <img id="video-stream" src="{% url 'video_feed' %}">
     </div>
 
-    <script src="{% static 'ui/js/camera.js' %}"></script>        
 
 
     <!-- Loading asynchronously the scripts -->
