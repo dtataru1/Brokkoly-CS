@@ -1,6 +1,77 @@
 body {
-    background-image: url("images/background.png");
-    background-size: 100%;
+    background-image: url("images/base/background.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
+#page_title {
+    position: absolute;
+    top: 1%;
+    left: 300px;
+    color: white;
+}
+
+nav {
+    background-color: #0e172e;
+    position: absolute;
+    left: 1%;
+    top: 5%;
+    display: flex;
+    align-items: center; 
+    justify-content: left;
+    border-radius: 10px;
+    max-width: 60px;
+    transition: max-width 0.2s ease;
+    overflow: hidden;
+}
+
+nav:hover {
+    max-width: 300px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+}
+
+ nav ul li{
+    font-weight: bold;
+    text-decoration: none;    
+    padding: 0;
+    flex: 1;
+    text-align: left;
+    margin-bottom: 20px;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: white;
+    display: block;
+    /* width: 100%;
+    height: 100%; */
+    padding: 10px;
+
+}
+
+nav ul li a img {
+    width: 30px;
+    height: 30px;
+    vertical-align: middle;
+    margin-left: 5px;
+    margin-right: 15px;
+}
+
+
+nav ul li.active {
+    background-color: #146cb5;
+}
+
+nav ul li:hover{
+    background-color: #ad6242;
+}
