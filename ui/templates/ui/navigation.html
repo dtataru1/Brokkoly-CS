@@ -4,22 +4,14 @@
 <html>
 <head>
     <title>Navigation</title>
-    <link rel="stylesheet" href="{% static 'ui/navigation.css' %}" />
+    <link rel="stylesheet" href="{% static 'ui/css/navigation.css' %}" />
     <script src='https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.js'></script>
     <link href='https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.css' rel='stylesheet' />
 </head>
 
 <body>
 
-    <nav>
-        <ul>
-            <a href="../setup"><img src="{% static 'ui/images/setup.svg' %}"></img><span>Setup</span></a>>
-            <a href="../manual-control"><img src="{% static 'ui/images/gamepad.svg' %}"></img><span>Manual Control</span></a>>
-            <a href="../navigation"><img src="{% static 'ui/images/navigation.svg' %}"></img><span>Navigation</span></a>
-            <a href="../drone-info"><img src="{% static 'ui/images/info.svg' %}"></img><span>Drone Info</span></a>
-            <a href="../documentation"><img src="{% static 'ui/images/documentation.svg' %}"></img><span>Documentation</span></a>
-        </ul>
-    </nav>
+
     <h1 id="page_title">NAVIGATION</h1>
 
     <div id="map" style='width: 900px; height: 700px;'></div>

@@ -1,26 +1,16 @@
-<!DOCTYPE html>
+{% extends "ui/base.html" %}
 
-{% load static %}
-<html>
-<head>
-    <title>Manual Control</title>
-    <link rel="stylesheet" href="{% static 'ui/manual_control.css' %}" />
-    <script src='https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.js'></script>
-    <link href='https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.css' rel='stylesheet' />
-</head>
+<!-- {% load static %} -->
 
-<body>
+{% block extra_styles %}
+<link rel="stylesheet" href="{% static 'ui/css/manual_control.css' %}" />
+<link href='https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.css' rel='stylesheet' />
+{% endblock %}
 
-    <nav>
-        <ul>
-            <a href="../setup"><img src="{% static 'ui/images/setup.svg' %}"></img><span>Setup</span></a>>
-            <a href="../manual-control"><img src="{% static 'ui/images/gamepad.svg' %}"></img><span>Manual Control</span></a>>
-            <a href="../navigation"><img src="{% static 'ui/images/navigation.svg' %}"></img><span>Navigation</span></a>
-            <a href="../drone-info"><img src="{% static 'ui/images/info.svg' %}"></img><span>Drone Info</span></a>
-            <a href="../documentation"><img src="{% static 'ui/images/documentation.svg' %}"></img><span>Documentation</span></a>
-        </ul>
-    </nav>
-    <h1 id="page_title">MANUAL CONTROL</h1>
+{% block page_title %}MANUAL CONTROL{% endblock %}
+
+
+{% block content %}
 
     <div id="camera_display">
         <video id="videoElement" height="500px" autoplay></video>
@@ -28,8 +18,17 @@
 
     <script src="{% static 'ui/js/camera.js' %}"></script>        
 
-    
-    <div id="map" style='width: 500px; height: 500px;'></div>
+
+    <!-- Loading asynchronously the scripts -->
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.js' async></script>
+
+{% endblock %}
+
+
+
+
+
+    <!-- <div id="map" style='width: 500px; height: 500px;'></div>
         <script>
         mapboxgl.accessToken = 'pk.eyJ1IjoiZHRhdGFydSIsImEiOiJjbGk2MHR3b2QzNng1M2Ntd2p3NDZ5dm83In0.vdDcxDfcebYvq54vva5OtQ';
         const map = new mapboxgl.Map({
@@ -80,38 +79,4 @@
     });
 
 
-       </script>
-
-    <div id="sensor_display">
-            <h3>SENSOR DATA</h3>
-        
-        <div id="gps_data">
-            <h4>GPS</h4>
-            <ul>
-                <li>Lat.: 43.664556°N</li>
-                <li>Lon.: 7.867775°E</li>
-                <li>Alt.: 12.3m</li>
-            </ul>
-        </div>
-        <h4 id="battery_voltage">Battery Voltage: 19.2V</h4>
-            <div id="motor_speeds"> <h4>Motor Speeds</h4>
-                <ul>
-                    <li>M1: 1200RPM</li>
-                    <li>M2: 2000RPM</li>
-                    <li>M3: 1200RPM</li>
-                    <li>M4: 8000RPM</li>
-                </ul></div>
-       
-    </div>
-
-    <div id="control_inputs">This section is supposed to show what control inputs the operator is sending to the drone
-    </div>
-
-    <!-- <div id="drone_state">
-        <p>Current drone state and emergency stops (wait, abort, etc...)</p>
-    </div> -->
-</body>
-
-
-</html>
-
+       </script> -->
