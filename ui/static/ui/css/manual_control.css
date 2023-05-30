@@ -21,14 +21,14 @@
 
 }
 
-/* #map {
+#map {
      position: absolute;
      top: 70px;
      left: 1300px;
-
      border-radius: 25px;
 }
 
+/*
 #sensor_display {
      position: absolute;
      background-color: #ad6242;

@@ -23,7 +23,7 @@ urlpatterns = [
     path("", views.setup),
     path("setup/", views.setup),
     path("manual-control/", views.manual_control),
-    path("navigation", views.navigation),
+    path("navigation/", views.navigation),
     path("drone-info/", views.drone_info),
     path("documentation/", views.documentation),
     path('video_feed/', views.video_feed, name='video_feed'),
