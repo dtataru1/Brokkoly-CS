@@ -2,7 +2,7 @@
 {% load static %}
 {% block extra_styles %}
 
-<script src='https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.js' async></script>
+<script src='https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.js'></script>
 <link href='https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.css' rel='stylesheet' />
 <link rel="stylesheet" href="{% static 'ui/css/manual_control.css' %}" />
 {% endblock %}
@@ -17,8 +17,10 @@
     </div>
 
     <div id="map" style='width: 500px; height: 500px;'></div>
+
+    <div id="sensor_display"></div>
     <!-- Loading asynchronously the scripts -->
-    <script src="{% static 'ui/js/manualmap.js' %}" async></script>
+    <script src="{% static 'ui/js/manualmap.js' %}"></script>
 
 
 {% endblock %}
