@@ -1,10 +1,16 @@
 <html>
-    <head><title>Brokkoly CS</title></head>
-    <link rel="stylesheet" href="{% static 'ui/manual_control.css' %}" />
+    <head><title>Brokkoly Control Station</title></head>
+    <link rel="stylesheet" href="{% static 'ui/css/base.css' %}" />
+    {% block extra_styles %}
     <body>
-
         <nav>
-            
+            <ul>
+                <a href="../setup"><img src="{% static 'ui/images/setup.svg' %}"></img><span>Setup</span></a>>
+                <a href="../manual-control"><img src="{% static 'ui/images/gamepad.svg' %}"></img><span>Manual Control</span></a>>
+                <a href="../navigation"><img src="{% static 'ui/images/navigation.svg' %}"></img><span>Navigation</span></a>
+                <a href="../drone-info"><img src="{% static 'ui/images/info.svg' %}"></img><span>Drone Info</span></a>
+                <a href="../documentation"><img src="{% static 'ui/images/documentation.svg' %}"></img><span>Documentation</span></a>
+            </ul>
         </nav>
 
         {% block content %}{% endblock %}
