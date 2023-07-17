@@ -13,4 +13,4 @@ setup:
 	venv/bin/python3 -m pip install -r requirements.txt
 
 brokkoly:
-	venv/bin/python3 -m manage runserver 0.0.0.0:8000
+	venv/bin/python3 -m manage runserver
